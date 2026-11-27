@@ -13,4 +13,5 @@ let result = 0;
 for (const item of inventory) {
   result += item.quantity * item.price;
 }
+
 console.log(`มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก ${result} บาท`);

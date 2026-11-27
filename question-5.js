@@ -22,18 +22,18 @@ const promotionCode = "SALE20";
 
 function calculateTotalPrice(products, promotionCode) {
   let sum = 0;
-  let result = 0;
+
   for (const item of products) {
     sum += item.price * item.quantity;
-    if (promotionCode === "SALE20") {
-      result = sum - (sum * 0.2);
-    } else if (promotionCode === "SALE50") {
-      result = sum - (sum * 0.5);
-    } else {
-      return 0;
-    }
   }
-  return result;
+
+  if (promotionCode === "SALE20") {
+    return sum * 0.8;
+  } else if (promotionCode === "SALE50") {
+    return sum * 0.5;
+  }
+
+  return sum;
 }
 
-console.log(calculateTotalPrice(products, "SALE50"));
+console.log(calculateTotalPrice(products, promotionCode));
