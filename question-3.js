@@ -9,8 +9,6 @@ function checkPasswordStrength(userPassword) {
     return "Medium";
   } else if (userPassword.length > 10) {
     return "Strong";
-  } else {
-    return errer;
   }
 }
 
